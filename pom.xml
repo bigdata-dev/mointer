@@ -444,8 +444,8 @@
 							</manifest>
 						</archive>
 						<includes>
-							<include>cn/crxy/ods/**</include>
-							<include>cn/crxy/utils/**</include>
+							<include>com/ryxc/ods/**</include>
+							<include>com/ryxc/utils/**</include>
 <!--						<include>cn/crxy/idc/hbase/**</include>
 							<include>cn/crxy/idc/impala/**</include>
 							<include>cn/crxy/idc/schedule/*.class</include>
