@@ -299,8 +299,11 @@
 
 	<build>
 		<finalName>mointer</finalName>
-		<sourceDirectory>src/</sourceDirectory>
-		<testSourceDirectory>src/</testSourceDirectory>
+		<sourceDirectory>src/main/java/</sourceDirectory>
+		<!--
+		<testSourceDirectory>src/main/test/</testSourceDirectory>
+		-->
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -404,8 +407,11 @@
 								</artifactItem>
 
 							</artifactItems>
+							<!-- ${project.build.directory}为Maven内置变量，缺省为target -->
 							<outputDirectory>${project.build.directory}/classes/lib</outputDirectory>
+							<!-- 表示是否不包含间接依赖的包 -->
 							<excludeTransitive>false</excludeTransitive>
+							<!-- 表示复制的jar文件去掉版本信息 -->
 							<stripVersion>true</stripVersion>
 						</configuration>
 					</execution>
@@ -510,7 +516,7 @@
 
 		<resources>
 			<resource>
-				<directory>src</directory>
+				<directory>src/main/resources/</directory>
 				<excludes>
 					<exclude>**/*.java</exclude>
 				</excludes>
