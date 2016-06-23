@@ -60,7 +60,7 @@ public class MmsReducer extends Reducer<Text,MmsRecord,NullWritable,Text>{
         valuetext.set(sb_value.toString());
 
         StringBuffer path = new StringBuffer();
-        path.append("/user/superman/MmsTest/");
+        path.append("/user/ryxc/MmsTest/");
         path.append(sdf.format(date));
         path.append("-");
 
@@ -68,7 +68,7 @@ public class MmsReducer extends Reducer<Text,MmsRecord,NullWritable,Text>{
                 "--------------valuetext = " + valuetext
         );
 
-
+        //多目录输出
         multipleOutputs.write(NullWritable.get(),valuetext,path.toString());
 
     }
